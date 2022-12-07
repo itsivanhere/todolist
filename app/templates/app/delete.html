@@ -1,0 +1,25 @@
+<!-- connect base.html kesini dengan perantara django -->
+{% extends 'app/base.html' %}  
+
+<!-- extend atribut base.html -->
+{% block content %}
+
+<!-- memasukkan atribut navbar.html ke home.html -->
+{% include 'app/navbar.html' %}
+
+    <div class="container-fluid mt-2">
+        <div class="row">
+            <div class="col">
+                <h2>Delete Task</h2>
+                <h4>Are you sure to delete this task?</h4>
+                <form method="POST">
+                    {% csrf_token %}
+                    <br>
+                </form>
+                <button class="btn btn-danger" type="Submit">Delete</button>
+                <a class="btn btn-primary" href="{% url 'home' %}">Cancel</a>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

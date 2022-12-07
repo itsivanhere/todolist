@@ -1,0 +1,18 @@
+<!-- connect base.html kesini dengan perantara django -->
+{% extends 'app/base.html' %}  
+
+<!-- extend atribut base.html -->
+{% block content %}
+
+<!-- memasukkan atribut navbar.html ke home.html -->
+{% include 'app/navbar.html' %}
+
+    <div class="container-fluid mt-2">
+        <div class="row">
+            <div class="col">
+                <h2>Edit Task</h2>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
